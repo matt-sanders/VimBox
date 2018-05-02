@@ -82,8 +82,6 @@ else
           \ 'ToggleType(-1)':       ['<c-y>', '<c-down>'],
           \ 'PrtCurLeft()':         ['<c-b>', '<left>', '<c-^>'],
           \ 'PrtCurRight()':        ['<c-f>', '<right>'],
-          \ 'AcceptSelection("e")': ['<c-t>'],
-          \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
           \ 'PrtClearCache()':      ['<D-C>'],
           \ 'PrtDeleteEnt()':       ['<F7>'],
           \ 'PrtExit()':            ['<c-l>', '<esc>', '<c-c>', '<c-g>'],
