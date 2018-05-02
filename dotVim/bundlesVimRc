@@ -19,6 +19,11 @@ let g:buffergator_viewport_split_policy = 'R'
 let g:buffergator_suppress_keymaps = 1
 
 " ==================================================================
+" Comment blocks of text
+" ==================================================================
+Plug 'tpope/vim-commentary'
+
+" ==================================================================
 " Prettier formatting
 " ==================================================================
 Plug 'prettier/vim-prettier', {
