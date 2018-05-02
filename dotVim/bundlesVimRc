@@ -2,6 +2,34 @@
 " Pretty much plug and play with MacVim
 " ==================================================
 
+" ==================================================
+" Buffergator
+" ==================================================
+Plug 'jeetsukumaran/vim-buffergator'
+
+" Easy bindings for its various modes
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>
+
+" Use the right side of the screen
+let g:buffergator_viewport_split_policy = 'R'
+
+" I want my own keymappings...
+let g:buffergator_suppress_keymaps = 1
+
+" ==================================================================
+" Prettier formatting
+" ==================================================================
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+
+" let g:prettier#config#single_quote = 'false'
+let g:prettier#autoformat = 0
+let g:prettier#config#trailing_comma = 'none'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
+
 " ========================== Mario.vim =============================
 " Plug 'rbtnn/game_engine.vim'
 " Plug 'rbtnn/mario.vim'
@@ -419,8 +447,8 @@ source ~/.vim/pluginRc/ctrlPVimRc
 " Plug 'jordwalke/AutoComplPop'
 let g:acp_ignorecaseOption = 1
 
-Plug 'lifepillar/vim-mucomplete'
-source ~/.vim/pluginRc/mucompleteVimRc
+"Plug 'lifepillar/vim-mucomplete'
+"source ~/.vim/pluginRc/mucompleteVimRc
 
 " ==============================================================================
 
