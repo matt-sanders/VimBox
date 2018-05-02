@@ -140,6 +140,8 @@ set scs
 " leader is comma
 let mapleader=","
 
+set clipboard=unnamed
+
 " TODO: Set up mappings to toggle between text mode and code mode.
 " Editing code
 set nowrap
