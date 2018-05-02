@@ -137,6 +137,9 @@ set nospell
 set ic
 set scs
 
+" leader is comma
+let mapleader=","
+
 " TODO: Set up mappings to toggle between text mode and code mode.
 " Editing code
 set nowrap
