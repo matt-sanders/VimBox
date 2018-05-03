@@ -83,18 +83,18 @@ function! AirlineInit()
     return ''
   endfunction
 
-  call airline#parts#define_function('syntasticErrors', 'GetSyntasticErrors')
-  call airline#parts#define_function('syntasticWarnings', 'GetSyntasticWarnings')
-  call airline#parts#define_function('syntasticOk', 'GetSyntasticOk')
-  call airline#parts#define_minwidth('syntasticErrors', 30)
-  call airline#parts#define_minwidth('syntasticWarnings', 30)
+  " call airline#parts#define_function('syntasticErrors', 'GetSyntasticErrors')
+  " call airline#parts#define_function('syntasticWarnings', 'GetSyntasticWarnings')
+  " call airline#parts#define_function('syntasticOk', 'GetSyntasticOk')
+  " call airline#parts#define_minwidth('syntasticErrors', 30)
+  " call airline#parts#define_minwidth('syntasticWarnings', 30)
   " Might need to define a condition here?
-  call airline#parts#define_minwidth('syntasticOk', 30)
+  " call airline#parts#define_minwidth('syntasticOk', 30)
   " let g:airline_section_warning=airline#section#create(['whitespace', 'syntasticWarnings'])
-  let g:airline_section_warning=airline#section#create(['syntasticWarnings'])
-  let g:airline_section_error=airline#section#create(['syntasticErrors'])
+  " let g:airline_section_warning=airline#section#create(['syntasticWarnings'])
+  " let g:airline_section_error=airline#section#create(['syntasticErrors'])
   " create doesn't add in between separators - unlike create_right'
-  let g:airline_section_z=airline#section#create(['%3p%%'. g:airline_symbols.space, 'linenr',  ':%3v', 'syntasticOk'])
+  " let g:airline_section_z=airline#section#create(['%3p%%'. g:airline_symbols.space, 'linenr',  ':%3v', 'syntasticOk'])
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
 

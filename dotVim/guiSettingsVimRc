@@ -64,8 +64,10 @@ if has("gui_running") " all this for gui use
   let g:vimBoxLinterWarningSymbol="⮿"
   let g:vimBoxLinterOkSymbol="☻"
 else
-  let g:vimBoxLinterErrorSymbol="⮿"
-  let g:vimBoxLinterWarningSymbol="⮿"
+  let g:vimBoxLinterErrorSymbol="✗"
+  let g:vimBoxLinterWarningSymbol="⚠︎"
+  let g:airline#extensions#ale#error_symbol="✗"
+  let g:airline#extensions#ale#warning_symbol="⚠︎"
   let g:vimBoxLinterOkSymbol="☻"
 endif
 

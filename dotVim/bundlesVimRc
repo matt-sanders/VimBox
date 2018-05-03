@@ -19,6 +19,15 @@ let g:buffergator_viewport_split_policy = 'R'
 let g:buffergator_suppress_keymaps = 1
 
 " ==================================================================
+" Ale for linting etc
+" ==================================================================
+Plug 'w0rp/ale'
+
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\} 
+
+" ==================================================================
 " Comment blocks of text
 " ==================================================================
 Plug 'tpope/vim-commentary'
@@ -26,14 +35,14 @@ Plug 'tpope/vim-commentary'
 " ==================================================================
 " Prettier formatting
 " ==================================================================
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+" Plug 'prettier/vim-prettier', {
+"   \ 'do': 'npm install',
+"   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
-" let g:prettier#config#single_quote = 'false'
-let g:prettier#autoformat = 0
-let g:prettier#config#trailing_comma = 'none'
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
+" " let g:prettier#config#single_quote = 'false'
+" let g:prettier#autoformat = 0
+" let g:prettier#config#trailing_comma = 'none'
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
 
 " ========================== Mario.vim =============================
 " Plug 'rbtnn/game_engine.vim'
@@ -355,7 +364,7 @@ endif
 
 
 " ==================================== Syntastic ================================
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
 " TODO: Disable signs in merlin/syntastic, and only use the VimHint strategy of
 " underlining *just* the region of error.
 let g:syntastic_enable_signs=0
@@ -364,6 +373,9 @@ let g:syntastic_loc_list_height=15
 " This doesn't work:'
 let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
 let g:airline#extensions#quickfix#location_text = 'Diagnostics'
+
+" Standard JS
+let g:syntastic_javascript_checkers = ['standard']
 
 " Flow checking is too slow. Makes Vim lock up (did I not configure this
 " correctly?)
