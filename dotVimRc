@@ -144,10 +144,10 @@ set clipboard=unnamed
 
 " TODO: Set up mappings to toggle between text mode and code mode.
 " Editing code
-set nowrap
-set wrapmargin=0
+" set nowrap
+" set wrapmargin=0
 " let &textwidth=exists('g:textColumns') && !empty(g:textColumns) ? g:textColumns : 80
-set nolinebreak
+" set nolinebreak
 
 set hlsearch
 set formatoptions+=or
@@ -288,6 +288,8 @@ if filereadable(expand("~/.vim/bundlesVimRc.custom"))
 endif
 
 call plug#end()
+
+filetype plugin indent on
 
 " MacVim Quick Start is pretty strange. It's as if it always opens the *next*
 " MacVim window whenever you open the currently visible one.
